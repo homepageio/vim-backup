@@ -171,7 +171,27 @@ nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
 nnoremap <leader>d :UndotreeToggle<CR>
+" FZF
+"
+nnoremap <leader>p : FZF<CR>
+nnoremap <leader>f : Ag<CR>
+nnoremap <leader>r : Rg<CR>
+nnoremap <leader>b : Buffers<CR>
+nnoremap q; : History<CR>
 
+" This is the default option:
+"   - Preview window on the right with 50% width
+"   - CTRL-/ will toggle preview window.
+" - Note that this array is passed as arguments to fzf#vim#with_preview function.
+" - To learn more about preview window options, see `--preview-window` section of `man fzf`.
+let g:fzf_preview_window = ['right:70%', 'ctrl-/']
+
+" Preview window on the upper side of the window with 40% height,
+" hidden by default, ctrl-/ to toggle
+let g:fzf_preview_window = ['up:20%:hidden', 'ctrl-/']
+
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = []
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""file create"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
