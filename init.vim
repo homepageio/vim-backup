@@ -116,6 +116,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'voldikss/vim-floaterm'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
+Plug 'gcmt/wildfire.vim'
 call plug#end()
 
 
