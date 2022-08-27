@@ -180,7 +180,7 @@ nnoremap <leader>p : FZF<CR>
 nnoremap <leader>r : Ag<CR>
 " nnoremap <leader>f : Rg<CR>
 nnoremap <leader>b : Buffers<CR>
-nnoremap q; : History<CR>
+nnoremap h; : History<CR>
 
 " This is the default option:
 "   - Preview window on the right with 50% width
