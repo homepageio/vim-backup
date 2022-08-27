@@ -9,6 +9,7 @@ filetype plugin indent on
 set encoding=utf-8
 " colorscheme hybrid
 syntax on
+set relativenumber
 " TAB
 " 空格代替Tab"
 " 注意: 插入模式下输入【ctrl+v+i】可以强制输入一个tab
@@ -105,6 +106,7 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'mg979/vim-visual-multi'
 " mark 标记插件
 " mx        标记当前行
 " dmx       删除标记x
@@ -117,6 +119,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'gcmt/wildfire.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'kevinhwang91/rnvimr'
 call plug#end()
 
 
@@ -194,7 +198,21 @@ let g:fzf_preview_window = ['up:20%:hidden', 'ctrl-/']
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = []
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""vim-easy-align"""
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+"""""""""""""""ranger vim"""""""""""""""
+tnoremap <silent> <leader>i <C-\><C-n>:RnvimrResize<CR>
+nnoremap <silent> <leader>o :RnvimrToggle<CR>
+tnoremap <silent> <leader>o <C-\><C-n>:RnvimrToggle<CR>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""file create"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
