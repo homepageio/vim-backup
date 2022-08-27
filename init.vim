@@ -122,6 +122,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kevinhwang91/rnvimr'
 Plug 'preservim/nerdcommenter'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 
@@ -132,7 +133,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""plugset"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader>v :NERDTreeFind<cr>
+" \+v 快速定位文件的位置  \+g打开文件目录树
+noremap <leader>v :NERDTreeFind<cr> 
 noremap <leader>g :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = [
@@ -141,16 +143,19 @@ let NERDTreeIgnore = [
 			\ '\.sass-cache$', '\.egg-info$', '\.ropeproject$',
 		\]
 
-
+" ctrl+p 打开文件查找界面
 let g:ctrlp_map = '<c-p>'
-
+" ss 快速查找文件中的字符
 nmap ss <Plug>(easymotion-s2)
 let g:easycomplete_tab_trigger="<tab>"
 
 " Tag 
+" \+t 快速打开文件的中函数 变量 声明等
 nnoremap <leader>t :TagbarToggle<cr>
 set updatetime=100 " 100ms
 " easycomplete
+" gr 快速查询     gd：快速跳转到定义处
+" rn：重命名      gb：返回
 noremap gr :EasyCompleteReference<CR>
 noremap gd :EasyCompleteGotoDefinition<CR>
 noremap rn :EasyCompleteRename<CR>
@@ -160,25 +165,16 @@ nnoremap <silent> <C-k> :EasyCompleteNextDiagnostic<CR>
 nnoremap <silent> <C-j> :EasyCompletePreviousDiagnostic<CR>
 
 " set voldikss/vim-floaterm
+" \+n 打开新终端  \+q 退出终端
 nnoremap   <leader>n    :FloatermNew<CR>
 tnoremap   <leader>n    <C-\><C-n>:FloatermNew<CR>
 " nnoremap   <leader>k    :FloatermKill<CR>
 tnoremap   <leader>q    <C-\><C-n>:FloatermKill<CR>
 
-nnoremap   <silent>   <F6>    :FloatermKill<CR>
-tnoremap   <silent>   <F6>    <C-\><C-n>:FloatermKill<CR>
-nnoremap   <silent>   <F7>    :FloatermNew<CR>
-tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
-nnoremap   <silent>   <F8>    :FloatermPrev<CR>
-tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
-nnoremap   <silent>   <F9>    :FloatermNext<CR>
-tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
-nnoremap   <silent>   <F12>   :FloatermToggle<CR>
-tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
-
+" \+d 打开undotree 菜单
 nnoremap <leader>d :UndotreeToggle<CR>
 " FZF
-"
+" \+p 文件搜索   \+f和\+r 都是模糊查找   q;历史记录
 nnoremap <leader>p : FZF<CR>
 nnoremap <leader>f : Ag<CR>
 nnoremap <leader>r : Rg<CR>
@@ -207,12 +203,19 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 """""""""""""""ranger vim"""""""""""""""
+" \+o 打开ranger \+i 调整ranger窗口的大小
 tnoremap <silent> <leader>i <C-\><C-n>:RnvimrResize<CR>
 nnoremap <silent> <leader>o :RnvimrToggle<CR>
 tnoremap <silent> <leader>o <C-\><C-n>:RnvimrToggle<CR>
 
+"""""""""""""/ack.vim"""""""""""""
+" \+a 模糊查找
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
 
 """""""""""""""""""nerdcommenter"""""""""""""""""""
+" \+cc：快速注释    \+c空格：快速去除注释
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
