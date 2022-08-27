@@ -124,6 +124,7 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'preservim/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 
@@ -276,7 +277,10 @@ noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+noremap <leader>u  <ESC>:Leaderf gtags --update<CR>
 
+"""""""""""""""""""""BufExplorer<"""""""""""""""""""""""""""""""
+nnoremap <leader>l :BufExplorerHorizontalSplit<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
