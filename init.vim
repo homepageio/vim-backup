@@ -7,7 +7,7 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 set encoding=utf-8
-" colorscheme hybrid
+colorscheme hybrid
 syntax on
 set relativenumber
 " TAB
@@ -28,8 +28,8 @@ set hlsearch " 高亮搜索
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""光标设置""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set gcr=n-v-c:ver25-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor
-set cursorline cursorcolumn
+" set gcr=n-v-c:ver25-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor
+" set cursorline cursorcolumn
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
