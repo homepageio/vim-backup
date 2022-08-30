@@ -7,7 +7,8 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 set encoding=utf-8
-colorscheme hybrid
+colorscheme gruvbox
+set background=dark
 syntax on
 set relativenumber
 " TAB
@@ -126,6 +127,7 @@ Plug 'mileszs/ack.vim'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 
@@ -152,6 +154,8 @@ let g:ctrlp_map = '<c-p>'
 nmap ss <Plug>(easymotion-s2)
 let g:easycomplete_tab_trigger="<tab>"
 
+"""""""""""""airline"""""""""""""
+let g:airline_theme='base16_gruvbox_dark_soft'
 " Tag 
 " \+t 快速打开文件的中函数 变量 声明等
 nnoremap <leader>t :TagbarToggle<cr>
